@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Room Booking Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Room Booking Form</h2>
+        <form method="POST">
+            <input type="text" name="phone" placeholder="Enter phone number" required>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <button type="submit">Book Room</button>
+        </form>
+        {% if message %}
+            <p class="success">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
